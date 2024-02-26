@@ -2,14 +2,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const list = document.getElementById("infi-list");
 
     // Function to add new list items
-    function addListItem() {
-        for (let i = 0; i < 2; i++) {
-            const newItem = document.createElement("li");
-            newItem.textContent = "List Item";
-            list.appendChild(newItem);
-        }
-    }
+    // function addListItem() {
+    //     for (let i = 0; i < 2; i++) {
+    //         const newItem = document.createElement("li");
+    //         newItem.textContent = "List Item";
+    //         list.appendChild(newItem);
+    //     }
+    // }
 
+	let nextItemNumber = 11; // Start with item 11 after the initial 10 items
+
+function addMoreItems() {
+  for (let i = 0; i < 2; i++) {
+    const newItem = document.createElement("li");
+    newItem.textContent = `List Item ${nextItemNumber++}`;
+    list.appendChild(newItem);
+  }
+}
     // Add 10 list items by default
     for (let i = 1; i <= 10; i++) {
         const newItem = document.createElement("li");
